@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:40:38 by acarpent          #+#    #+#             */
-/*   Updated: 2025/03/17 11:50:35 by acarpent         ###   ########.fr       */
+/*   Updated: 2025/03/21 12:21:48 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Zombie* zombieHorde (int N, std::string name) {
 
     Zombie* horde = new Zombie[N];
     for (int i = 0; i < N; i++) {
-        horde[i] = Zombie(name);
+        horde[i].setName(name);
     }
     return horde;
 }
