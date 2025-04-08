@@ -108,7 +108,7 @@ const Fixed &Fixed::max(Fixed const &a, Fixed const &b) {
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed) {
-    out << fixed.toFloat(); // Convertit l'objet Fixed en float pour l'affichage
+    out << fixed.toFloat(); 
     return out;
 }
 
