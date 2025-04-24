@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-class Form;
+class AForm;
 
 class Bureaucrat {
     private:
@@ -18,7 +18,7 @@ class Bureaucrat {
         void incrementGrade();
         void decrementGrade();
 
-        void signForm(Form &form); // Added this line
+        void signForm(AForm &form); // Added this line
 
         friend std::ostream &operator<<(std::ostream &out, const Bureaucrat &b);
         

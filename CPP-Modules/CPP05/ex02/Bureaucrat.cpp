@@ -1,5 +1,5 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade) : name(name), grade(grade) {
     if (grade < 1)
@@ -44,7 +44,7 @@ std::ostream &operator<<(std::ostream &out, const Bureaucrat &b) {
     return out;
 }
 
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(AForm &form) {
     try {
         form.beSigned(*this);
         std::cout << name << " signed " << form.getName() << std::endl;

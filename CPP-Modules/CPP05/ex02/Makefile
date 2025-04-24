@@ -2,7 +2,7 @@ NAME = ex01
 
 CXXFLAGS += -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp
 
 OBJ_DIR = Objs
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
