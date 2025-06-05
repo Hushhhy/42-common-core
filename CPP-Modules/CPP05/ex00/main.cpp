@@ -3,7 +3,7 @@
 int main(void) {
     try {
         Bureaucrat b("JCVD", 150);
-        std::cout << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
+        std::cout << b << std::endl;
         b.decrementGrade();
     } catch (const Bureaucrat::GradeTooHighException &exception) {
         std::cerr << exception.what() << std::endl;

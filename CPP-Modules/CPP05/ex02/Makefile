@@ -1,8 +1,8 @@
-NAME = ex01
+NAME = ex02
 
 CXXFLAGS += -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Bureaucrat.cpp  Form.cpp
+SRC = main.cpp Bureaucrat.cpp  AForm.cpp presidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
 
 OBJ_DIR = Objs
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)

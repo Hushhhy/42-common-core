@@ -1,12 +1,12 @@
-#include "Form.hpp"
+#include "AForm.hpp"
 
-Form::Form() : _name(), _signGrade(), _executeGrade() {
+AForm::AForm() : _name(), _signGrade(), _executeGrade() {
 }
 
-Form::Form(const Form &copy) : _name(copy._name), _signGrade(copy._signGrade), _executeGrade(copy._executeGrade) {
+AForm::AForm(const AForm &copy) : _name(copy._name), _signGrade(copy._signGrade), _executeGrade(copy._executeGrade) {
 }
 
-Form::Form(const std::string &name, int signGrade, int executeGrade)
+AForm::AForm(const std::string &name, int signGrade, int executeGrade)
     : _name(name), _isSigned(false), _signGrade(signGrade), _executeGrade(executeGrade) {
     if (signGrade > 150 || executeGrade > 150)
         throw GradeTooLowException();
@@ -14,41 +14,41 @@ Form::Form(const std::string &name, int signGrade, int executeGrade)
         throw GradeTooHighException();
 }
 
-Form::~Form() {
+AForm::~AForm() {
 }
 
-std::string Form::getName() const {
+std::string AForm::getName() const {
     return this->_name;
 }
 
-int Form::getSignGrade() const {
+int AForm::getSignGrade() const {
     return this->_signGrade;
 }
 
-int Form::getExecuteGrade() const {
+int AForm::getExecuteGrade() const {
     return this->_executeGrade;
 }
 
-bool Form::isSigned() const {
+bool AForm::isSigned() const {
     return this->_isSigned;
 }
 
-void Form::beSigned(Bureaucrat &bureaucrat) {
+void AForm::beSigned(Bureaucrat &bureaucrat) {
     if (bureaucrat.getGrade() <= this->_signGrade)
         this->_isSigned = true;
     else
-        throw Form::GradeTooLowException();
+        throw AForm::GradeTooLowException();
 }
 
 
-std::ostream &operator<<(std::ostream &os, const Form &form) {
+std::ostream &operator<<(std::ostream &os, const AForm &form) {
     os << "Form \"" << form.getName() << "\", signed: " << (form.isSigned() ? "yes" : "no")
        << ", sign grade: " << form.getSignGrade()
        << ", execute grade: " << form.getExecuteGrade();
     return os;
 }
 
-Form &Form::operator=(const Form &copy) {
+AForm &AForm::operator=(const AForm &copy) {
     if (this != &copy) {
         this->_isSigned = copy._isSigned;
     }
