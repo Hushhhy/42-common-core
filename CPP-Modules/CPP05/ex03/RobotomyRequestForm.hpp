@@ -19,7 +19,6 @@ class RobotomyRequestForm : public AForm {
         void execute(Bureaucrat const &executor) const;
 
         RobotomyRequestForm &operator=(const RobotomyRequestForm &copy);
-
 };
 
 #endif
