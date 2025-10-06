@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <exception>
 #include <stack>
+#include <sstream>
 
 class RPN {
     private:
@@ -18,6 +19,7 @@ class RPN {
         RPN(RPN const &copy);
         ~RPN();
         RPN &operator=(RPN const &copy);
+        int calculate();
 };
 
 #endif
